@@ -4,9 +4,111 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.agh.edu.to2.budgetplanner.controller.AddCategoryDialogCOntroller">
-   <center>
-      <Button mnemonicParsing="false" text="AddCategories" BorderPane.alignment="CENTER" />
-   </center>
-</BorderPane>
+<TitledPane animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="199.0" prefWidth="296.0" text="DodaJ" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <content>
+      <BorderPane prefHeight="312.0" prefWidth="414.0">
+         <top>
+            <Pane prefHeight="15.0" prefWidth="274.0" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <Pane prefHeight="15.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="213.0" layoutY="-5.0" mnemonicParsing="false" text="Zapisz" />
+                  <Button layoutX="138.0" layoutY="-5.0" mnemonicParsing="false" text="Anuluj" />
+               </children>
+            </Pane>
+         </bottom>
+         <right>
+            <Pane prefHeight="200.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <left>
+                  <BorderPane prefHeight="200.0" prefWidth="117.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <BorderPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <ComboBox prefWidth="150.0" BorderPane.alignment="CENTER" />
+                           </center>
+                           <right>
+                              <Pane prefHeight="200.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                           </right>
+                           <top>
+                              <Label prefHeight="15.0" prefWidth="113.0" text="Kat. nadrzedna" BorderPane.alignment="CENTER" />
+                           </top>
+                        </BorderPane>
+                     </top>
+                     <bottom>
+                        <BorderPane prefHeight="71.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <Pane prefHeight="10.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                           </top>
+                           <center>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <ComboBox editable="true" prefWidth="150.0" BorderPane.alignment="CENTER" />
+                                 </center>
+                                 <top>
+                                    <Label prefHeight="15.0" prefWidth="101.0" text="Nazwa kat." BorderPane.alignment="CENTER" />
+                                 </top>
+                                 <bottom>
+                                    <Pane prefHeight="14.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </bottom>
+                              </BorderPane>
+                           </center>
+                           <right>
+                              <Pane prefHeight="200.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                           </right>
+                        </BorderPane>
+                     </bottom>
+                  </BorderPane>
+               </left>
+               <right>
+                  <BorderPane prefHeight="200.0" prefWidth="117.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <BorderPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <center>
+                              <TextField BorderPane.alignment="CENTER" />
+                           </center>
+                           <left>
+                              <Pane prefHeight="200.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                           </left>
+                           <top>
+                              <Label prefHeight="15.0" prefWidth="102.0" text="Budżet" BorderPane.alignment="CENTER" />
+                           </top>
+                        </BorderPane>
+                     </top>
+                     <bottom>
+                        <BorderPane prefHeight="71.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <bottom>
+                              <BorderPane prefHeight="71.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <top>
+                                    <Pane prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                 </top>
+                                 <center>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <center>
+                                          <CheckBox mnemonicParsing="false" prefHeight="8.0" prefWidth="89.0" text="Domyslna" BorderPane.alignment="CENTER" />
+                                       </center>
+                                       <bottom>
+                                          <Pane prefHeight="20.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                                       </bottom>
+                                    </BorderPane>
+                                 </center>
+                              </BorderPane>
+                           </bottom>
+                           <left>
+                              <Pane prefHeight="200.0" prefWidth="10.0" BorderPane.alignment="CENTER" />
+                           </left>
+                        </BorderPane>
+                     </bottom>
+                  </BorderPane>
+               </right>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </content>
+</TitledPane>

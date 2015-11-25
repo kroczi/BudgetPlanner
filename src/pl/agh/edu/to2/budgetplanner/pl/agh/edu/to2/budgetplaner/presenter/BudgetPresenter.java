@@ -3,7 +3,6 @@ package pl.agh.edu.to2.budgetplanner.pl.agh.edu.to2.budgetplaner.presenter;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TitledPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import pl.agh.edu.to2.budgetplanner.Main;
@@ -55,7 +54,7 @@ public class BudgetPresenter {
             // Load the fxml file and create a new stage for the dialog
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(Main.class.getResource("view/AddCategory.fxml"));
-            BorderPane page = (BorderPane) loader.load();
+            TitledPane page = (TitledPane) loader.load();
 
             // Create the dialog Stage.
             Stage dialogStage = new Stage();

@@ -21,12 +21,12 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TreeTableView prefHeight="166.0" prefWidth="393.0" fx:id="incomeTableTreeView" >
+                                          <TreeTableView fx:id="incomeTableTreeView" editable="true" prefHeight="166.0" prefWidth="393.0">
                                              <columns>
-                                                <TreeTableColumn prefWidth="99.0" text="Category" fx:id="categoryColumn" />
-                                                <TreeTableColumn prefWidth="115.0" text="Plan" fx:id="planColumn" />
-                                                <TreeTableColumn prefWidth="108.0" text="Transactions" fx:id="transactionsColumn" />
-                                                <TreeTableColumn prefWidth="70.0" text="Saldo" fx:id="saldoColumn" />
+                                                <TreeTableColumn fx:id="categoryColumn" editable="true" prefWidth="99.0" text="Category" />
+                                                <TreeTableColumn fx:id="planColumn" editable="true" prefWidth="115.0" text="Plan" />
+                                                <TreeTableColumn fx:id="transactionsColumn" editable="true" prefWidth="108.0" text="Transactions" />
+                                                <TreeTableColumn fx:id="saldoColumn" editable="true" prefWidth="70.0" text="Saldo" />
                                              </columns>
                                           </TreeTableView>
                                        </children>
@@ -37,7 +37,7 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TreeTableView prefHeight="166.0" prefWidth="393.0" fx:id="outcomeTableTreeView">
+                                          <TreeTableView fx:id="outcomeTableTreeView" prefHeight="166.0" prefWidth="393.0">
                                              <columns>
                                                 <TreeTableColumn prefWidth="99.0" text="Category" />
                                                 <TreeTableColumn prefWidth="115.0" text="Plan" />
@@ -73,7 +73,7 @@
                      <center>
                         <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" onAction="#handleAddCategoryAction" text="Add" fx:id="addCategoryButton" />
+                              <Button fx:id="addCategoryButton" mnemonicParsing="false" onAction="#handleAddCategoryAction" prefHeight="25.0" prefWidth="89.0" text="Add" />
                               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Edit" />
                               <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Remove" />
                            </children>
@@ -114,14 +114,14 @@
                                        <bottom>
                                           <Pane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <ProgressBar prefWidth="105.0" progress="0.0" fx:id="overAllProgressBar" />
+                                                <ProgressBar fx:id="overAllProgressBar" prefWidth="105.0" progress="0.0" />
                                              </children>
                                           </Pane>
                                        </bottom>
                                        <top>
                                           <Pane prefHeight="30.0" prefWidth="105.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Label layoutX="3.0" layoutY="12.0" prefHeight="16.0" prefWidth="100.0" text="Art. spożywcze" />
+                                                <Label layoutX="3.0" layoutY="12.0" prefHeight="16.0" prefWidth="100.0" text="Podsumowanie" />
                                              </children>
                                           </Pane>
                                        </top>
@@ -130,14 +130,14 @@
                                        <bottom>
                                           <Pane prefHeight="30.0" prefWidth="105.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <ProgressBar prefWidth="105.0" progress="0.0" />
+                                                <ProgressBar fx:id="budgetProgressBar" prefWidth="105.0" progress="0.0" />
                                              </children>
                                           </Pane>
                                        </bottom>
                                        <top>
                                           <Pane prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                                              <children>
-                                                <Label layoutX="3.0" layoutY="12.0" prefHeight="16.0" prefWidth="100.0" text="Transport" />
+                                                <Label layoutX="3.0" layoutY="12.0" prefHeight="16.0" prefWidth="100.0" text="Budżet" />
                                              </children>
                                           </Pane>
                                        </top>
