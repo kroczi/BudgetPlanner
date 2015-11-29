@@ -35,7 +35,6 @@ public class Data {
     {
         try {
             persistanceManager.openConnection();
-            persistanceManager.createStatement();
             this.outcomeRootCategory = persistanceManager.getOutComeRootForYearMonth(YearMonth.of(yearMonth.getYear(), yearMonth.getMonth().getValue()));
             this.incomeRootCategory = persistanceManager.getIncomeRoootForYearMonth(YearMonth.of(yearMonth.getYear(), yearMonth.getMonth().getValue()));
             persistanceManager.closeConnection();
