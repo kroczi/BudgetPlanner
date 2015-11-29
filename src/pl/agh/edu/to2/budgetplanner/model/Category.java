@@ -17,6 +17,7 @@ import java.util.List;
  * Created by root on 22/11/15.
  */
 public class Category {
+    private long id;
     private StringProperty name;
     private IntegerProperty transactions;
     private IntegerProperty plan;
@@ -27,19 +28,21 @@ public class Category {
 
 
 
-    public Category(String name, int transactions, int plan)
+    public Category(String name, int transactions, int plan,long id)
     {
         this.name = new SimpleStringProperty(name);
         this.transactions = new SimpleIntegerProperty(transactions);
         this.plan = new SimpleIntegerProperty(plan);
         saldoBinding = Bindings.subtract(this.plan, this.transactions);
         subcategories = null;
+        this.id = id;
 
     }
 
-    public Category(String name)
+    public Category(String name,long id)
     {
         this.name = new SimpleStringProperty(name);
+        this.id = id;
         this.subcategories = new LinkedList<Category>();
     }
 
@@ -63,7 +66,7 @@ public class Category {
         {
             planBinding = planBinding.add(category.getPlanBinding());
             transactionsBinding = transactionsBinding.add(category.getTransactionsBinding());
-            //saldoBinding = Bindings.subtract(planBinding, transactionsBinding);
+            saldoBinding = Bindings.subtract(planBinding, transactionsBinding);
         }
 
         subcategories.add(category);
@@ -123,7 +126,12 @@ public class Category {
     }
 
     public void setPlan(int plan) {
-        this.plan.set(plan);
+        if (isLeaf()) {
+            this.plan.set(plan);
+        } else
+        {
+            System.out.print("Dear user, you cant change value of not leaf cell");
+        }
     }
 
     public int getTransactions() {
@@ -152,6 +160,14 @@ public class Category {
             }
         }
         return root;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
 

@@ -23,10 +23,10 @@
                                        <children>
                                           <TreeTableView fx:id="incomeTableTreeView" editable="true" prefHeight="166.0" prefWidth="393.0">
                                              <columns>
-                                                <TreeTableColumn fx:id="categoryColumn" editable="true" prefWidth="99.0" text="Category" />
-                                                <TreeTableColumn fx:id="planColumn" editable="true" prefWidth="115.0" text="Plan" />
-                                                <TreeTableColumn fx:id="transactionsColumn" editable="true" prefWidth="108.0" text="Transactions" />
-                                                <TreeTableColumn fx:id="saldoColumn" editable="true" prefWidth="70.0" text="Saldo" />
+                                                <TreeTableColumn fx:id="incomeCategoryColumn" editable="true" prefWidth="99.0" text="Category" />
+                                                <TreeTableColumn fx:id="incomePlanColumn" editable="true" prefWidth="115.0" text="Plan" />
+                                                <TreeTableColumn fx:id="incomeTransactionsColumn" editable="true" prefWidth="108.0" text="Transactions" />
+                                                <TreeTableColumn fx:id="incomeSaldoColumn" editable="true" prefWidth="70.0" text="Saldo" />
                                              </columns>
                                           </TreeTableView>
                                        </children>
@@ -39,10 +39,10 @@
                                        <children>
                                           <TreeTableView fx:id="outcomeTableTreeView" prefHeight="166.0" prefWidth="393.0">
                                              <columns>
-                                                <TreeTableColumn prefWidth="99.0" text="Category" />
-                                                <TreeTableColumn prefWidth="115.0" text="Plan" />
-                                                <TreeTableColumn prefWidth="108.0" text="Transactions" />
-                                                <TreeTableColumn prefWidth="70.0" text="Saldo" />
+                                                <TreeTableColumn fx:id="outcomeCategoryColumn" editable="true" prefWidth="99.0" text="Category" />
+                                                <TreeTableColumn fx:id="outcomePlanColumn" editable="true" prefWidth="115.0" text="Plan" />
+                                                <TreeTableColumn fx:id="outcomeTransactionsColumn" editable="true" prefWidth="108.0" text="Transactions" />
+                                                <TreeTableColumn fx:id="outcomeSaldoColumn" editable="true" prefWidth="70.0" text="Saldo" />
                                              </columns>
                                           </TreeTableView>
                                        </children>
