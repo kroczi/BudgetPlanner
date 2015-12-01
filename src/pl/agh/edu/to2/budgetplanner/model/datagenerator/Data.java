@@ -5,9 +5,6 @@ import pl.agh.edu.to2.budgetplanner.model.Category;
 import java.sql.SQLException;
 import java.time.YearMonth;
 
-/**
- * Created by root on 26/11/15.
- */
 public class Data {
     public Category incomeRootCategory;
     public Category outcomeRootCategory;
@@ -22,11 +19,7 @@ public class Data {
             this.incomeRootCategory = persistanceManager.getIncomeRoootForYearMonth(YearMonth.of(yearMonth.getYear(), yearMonth.getMonth().getValue()));
             persistanceManager.closeConnection();
 
-        } catch (ClassNotFoundException e) {
-            System.out.println("0"+e);
-            e.printStackTrace();
-        } catch (SQLException e) {
-            System.out.println("1"+e);
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
