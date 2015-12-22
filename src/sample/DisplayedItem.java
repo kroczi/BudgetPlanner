@@ -28,74 +28,24 @@ public class DisplayedItem extends TreeItem<DisplayedItem> {
         {
             if (!category.isSpending())
             {
-                this.balance = new DoubleBinding() {
-                    {
-                        super.bind(category.planValueProperty(), category.transactionsValueProperty());
-                    }
-                    @Override
-                    protected double computeValue() {
-                        return (category.transactionsValueProperty().get() - category.planValueProperty().get());
-                    }
-                };
+                this.balance = category.planValueProperty().subtract(category.transactionsValueProperty());
             } else
             {
-                this.balance = new DoubleBinding() {
-                    {
-                        super.bind(category.planValueProperty(), category.transactionsValueProperty());
-                    }
-                    @Override
-                    protected double computeValue() {
-                        return (category.planValueProperty().get() - category.transactionsValueProperty().get());
-                    }
-                };
-            }
-            this.progressBarBinding = new DoubleBinding() {
-                {
-                    super.bind(getTransactionsValueProperty(), getPlanValueProperty());
-                }
+               this.balance =  category.planValueProperty().subtract(category.transactionsValueProperty());
 
-                @Override
-                protected double computeValue() {
-                    return (getTransactionsValueProperty().getValue() / getPlanValueProperty().getValue());
-                }
-            };
+            }
+            this.progressBarBinding = getTransactionsValueProperty().divide(getPlanValueProperty());
 
         } else
         {
             if(!category.isSpending())
             {
-                this.balance = new DoubleBinding() {
-                    {
-                        super.bind(planSum, transactionsSum);
-                    }
-                    @Override
-                    protected double computeValue() {
-                        return (transactionsSum.get() - planSum.get() );
-                    }
-                };
+                this.balance = transactionsSum.subtract(planSum);
             } else
             {
-                this.balance = new DoubleBinding() {
-                    {
-                        super.bind(planSum, transactionsSum);
-                    }
-                    @Override
-                    protected double computeValue() {
-                        return (planSum.get() - transactionsSum.get());
-                    }
-                };
+                this.balance = planSum.subtract(transactionsSum);
             }
-            this.progressBarBinding = new DoubleBinding() {
-                {
-                    super.bind(getTransactionsSumBinding(), getPlanSumBinding());
-                }
-
-                @Override
-                protected double computeValue() {
-                    return (getTransactionsSumBinding().getValue() / getPlanSumBinding().getValue());
-                }
-            };
-
+            this.progressBarBinding = getTransactionsSumBinding().divide(getPlanSumBinding());
             this.planSum = this.planSum.add(this.getPlanValueProperty());
             this.transactionsSum = this.transactionsSum.add(this.getTransactionsValueProperty());
         }
@@ -106,51 +56,21 @@ public class DisplayedItem extends TreeItem<DisplayedItem> {
 
     public void addChildren(DisplayedItem child)
     {
-        if(child.isLeaf())
-        {
+        if(child.isLeaf()) {
             this.planSum = this.planSum.add(child.getPlanValueProperty());
             this.transactionsSum = this.transactionsSum.add(child.getTransactionsValueProperty());
 
-        } else
-        {
+        } else {
             this.planSum = this.planSum.add(child.getPlanSumBinding());
             this.transactionsSum = this.transactionsSum.add(child.getTransactionsSumBinding());
         }
-        this.progressBarBinding = new DoubleBinding() {
-            {
-                super.bind(getTransactionsSumBinding(), getPlanSumBinding());
-            }
-
-            @Override
-            protected double computeValue() {
-                return (getTransactionsSumBinding().getValue() / getPlanSumBinding().getValue());
-            }
-        };
-        if(!category.get().isSpending())
-        {
-            this.balance = new DoubleBinding() {
-                {
-                    super.bind(planSum, transactionsSum);
-                }
-                @Override
-                protected double computeValue() {
-                    return (transactionsSum.get() - planSum.get() );
-                }
-            };
-        } else
-        {
-            this.balance = new DoubleBinding() {
-                {
-                    super.bind(planSum, transactionsSum);
-                }
-                @Override
-                protected double computeValue() {
-                    return (planSum.get() - transactionsSum.get());
-                }
-            };
+        this.progressBarBinding =  getTransactionsSumBinding().divide(getPlanSumBinding());
+        if(!category.get().isSpending()) {
+            this.balance = transactionsSum.subtract(planSum);
+        } else {
+            this.balance = planSum.subtract(transactionsSum);
         }
         super.getChildren().add(child);
-
     }
 
     public Double getProgressBarBindingValue() {
@@ -193,22 +113,18 @@ public class DisplayedItem extends TreeItem<DisplayedItem> {
 
     public ObservableStringValue showPlanSumAsString()
     {
-        if (isLeaf())
-        {
+        if (isLeaf()) {
             return new SimpleStringProperty("-");
-        } else
-        {
+        } else {
             return planSum.asString();
         }
     }
 
     public ObservableStringValue showTransactionsSumAsString()
     {
-        if (isLeaf())
-        {
+        if (isLeaf()) {
             return new SimpleStringProperty("-");
-        } else
-        {
+        } else {
             return transactionsSum.asString();
         }
     }
