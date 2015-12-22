@@ -22,14 +22,14 @@
  */
 package com.mysql.jdbc.integration.c3p0;
 
+import com.mchange.v2.c3p0.C3P0ProxyConnection;
+import com.mchange.v2.c3p0.QueryConnectionTester;
+import com.mysql.jdbc.CommunicationsException;
+
 import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import com.mchange.v2.c3p0.C3P0ProxyConnection;
-import com.mchange.v2.c3p0.QueryConnectionTester;
-import com.mysql.jdbc.CommunicationsException;
 
 /**
  * ConnectionTester for C3P0 connection pool that uses the more efficient

@@ -24,14 +24,12 @@
  */
 package com.mysql.jdbc.util;
 
+import com.mysql.jdbc.StringUtils;
+
 import java.io.File;
 import java.io.IOException;
-
 import java.util.Iterator;
-import java.util.Locale;
 import java.util.Properties;
-
-import com.mysql.jdbc.StringUtils;
 
 /**
  * Controls a MySQL server using Java RunTime methods

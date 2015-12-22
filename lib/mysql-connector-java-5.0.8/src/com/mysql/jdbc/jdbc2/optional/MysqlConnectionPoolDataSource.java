@@ -24,11 +24,10 @@
  */
 package com.mysql.jdbc.jdbc2.optional;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-
 import javax.sql.ConnectionPoolDataSource;
 import javax.sql.PooledConnection;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 /**
  * This class is used to obtain a physical connection and instantiate and return

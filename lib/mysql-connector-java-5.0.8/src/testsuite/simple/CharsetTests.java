@@ -22,17 +22,11 @@
 
 package testsuite.simple;
 
+import testsuite.BaseTestCase;
+
 import java.sql.Connection;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Properties;
-
-import testsuite.BaseTestCase;
+import java.util.*;
 
 public class CharsetTests extends BaseTestCase {
 

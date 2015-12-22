@@ -24,10 +24,10 @@
  */
 package testsuite.regression;
 
-import java.util.Properties;
-
 import sun.applet.AppletSecurity;
 import testsuite.BaseTestCase;
+
+import java.util.Properties;
 
 /**
  * Tests various applet-related issues.

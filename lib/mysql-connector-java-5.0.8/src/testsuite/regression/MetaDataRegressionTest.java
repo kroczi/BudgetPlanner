@@ -24,24 +24,14 @@
  */
 package testsuite.regression;
 
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverPropertyInfo;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Types;
-import java.util.HashMap;
-import java.util.Properties;
-
-import testsuite.BaseTestCase;
-
 import com.mysql.jdbc.Driver;
-import com.mysql.jdbc.Field;
 import com.mysql.jdbc.NonRegisteringDriver;
 import com.mysql.jdbc.SQLError;
+import testsuite.BaseTestCase;
+
+import java.sql.*;
+import java.util.HashMap;
+import java.util.Properties;
 
 /**
  * Regression tests for DatabaseMetaData

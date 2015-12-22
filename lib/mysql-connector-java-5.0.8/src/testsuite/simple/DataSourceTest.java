@@ -24,26 +24,17 @@
  */
 package testsuite.simple;
 
-import testsuite.BaseTestCase;
-
-import java.io.File;
-
-import java.sql.Connection;
-
-import java.util.Hashtable;
-
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.Name;
-import javax.naming.NameParser;
-import javax.naming.Reference;
-import javax.naming.spi.ObjectFactory;
-
-import javax.sql.DataSource;
-import javax.sql.PooledConnection;
-
 import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
 import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
+import testsuite.BaseTestCase;
+
+import javax.naming.*;
+import javax.naming.spi.ObjectFactory;
+import javax.sql.DataSource;
+import javax.sql.PooledConnection;
+import java.io.File;
+import java.sql.Connection;
+import java.util.Hashtable;
 
 /**
  * 

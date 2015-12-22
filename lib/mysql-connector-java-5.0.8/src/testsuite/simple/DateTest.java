@@ -24,25 +24,16 @@
  */
 package testsuite.simple;
 
+import com.mysql.jdbc.SQLError;
 import testsuite.BaseTestCase;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Time;
-import java.sql.Timestamp;
-
+import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.Properties;
 import java.util.TimeZone;
-
-import com.mysql.jdbc.SQLError;
 
 /**
  * 

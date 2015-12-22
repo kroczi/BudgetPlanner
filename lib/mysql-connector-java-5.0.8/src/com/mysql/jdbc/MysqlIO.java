@@ -24,35 +24,21 @@
  */
 package com.mysql.jdbc;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStreamWriter;
-import java.lang.ref.SoftReference;
-import java.lang.reflect.Method;
-import java.math.BigInteger;
-import java.net.MalformedURLException;
-import java.net.Socket;
-import java.net.URL;
-import java.nio.ByteBuffer;
-import java.security.NoSuchAlgorithmException;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Properties;
-import java.util.zip.Deflater;
-
 import com.mysql.jdbc.profiler.ProfileEventSink;
 import com.mysql.jdbc.profiler.ProfilerEvent;
 import com.mysql.jdbc.util.ReadAheadInputStream;
 import com.mysql.jdbc.util.ResultSetUtil;
+
+import java.io.*;
+import java.lang.ref.SoftReference;
+import java.math.BigInteger;
+import java.net.MalformedURLException;
+import java.net.Socket;
+import java.net.URL;
+import java.security.NoSuchAlgorithmException;
+import java.sql.SQLException;
+import java.util.*;
+import java.util.zip.Deflater;
 
 
 /**

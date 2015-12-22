@@ -24,10 +24,9 @@
  */
 package com.mysql.jdbc.jdbc2.optional;
 
+import javax.sql.XAConnection;
 import java.sql.Connection;
 import java.sql.SQLException;
-
-import javax.sql.XAConnection;
 
 /**
  * @author mmatthew

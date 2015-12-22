@@ -24,21 +24,12 @@
  */
 package com.mysql.jdbc;
 
+import com.mysql.jdbc.exceptions.*;
+
 import java.sql.DataTruncation;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
-
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.TreeMap;
-
-import com.mysql.jdbc.exceptions.MySQLDataException;
-import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
-import com.mysql.jdbc.exceptions.MySQLNonTransientConnectionException;
-import com.mysql.jdbc.exceptions.MySQLSyntaxErrorException;
-import com.mysql.jdbc.exceptions.MySQLTransactionRollbackException;
+import java.util.*;
 
 /**
  * SQLError is a utility class that maps MySQL error codes to X/Open error codes

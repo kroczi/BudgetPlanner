@@ -24,37 +24,19 @@
  */
 package com.mysql.jdbc;
 
-import com.mysql.jdbc.PreparedStatement.BatchParams;
-import com.mysql.jdbc.Statement.CancelTask;
 import com.mysql.jdbc.exceptions.MySQLTimeoutException;
 import com.mysql.jdbc.profiler.ProfileEventSink;
 import com.mysql.jdbc.profiler.ProfilerEvent;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
-
 import java.math.BigDecimal;
-
 import java.net.URL;
-
-import java.sql.Array;
-import java.sql.Blob;
-import java.sql.Clob;
-import java.sql.Date;
-import java.sql.ParameterMetaData;
-import java.sql.Ref;
-import java.sql.SQLException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.sql.Types;
-
+import java.sql.*;
 import java.util.ArrayList;
-import java.util.BitSet;
 import java.util.Calendar;
-import java.util.Locale;
 import java.util.TimeZone;
 
 /**

@@ -26,11 +26,7 @@ package com.mysql.jdbc.jdbc2.optional;
 
 import com.mysql.jdbc.SQLError;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLWarning;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * Wraps statements so that errors can be reported correctly to

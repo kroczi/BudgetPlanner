@@ -24,15 +24,14 @@
  */
 package com.mysql.jdbc.jdbc2.optional;
 
-import java.util.Hashtable;
+import com.mysql.jdbc.NonRegisteringDriver;
 
 import javax.naming.Context;
 import javax.naming.Name;
 import javax.naming.RefAddr;
 import javax.naming.Reference;
 import javax.naming.spi.ObjectFactory;
-
-import com.mysql.jdbc.NonRegisteringDriver;
+import java.util.Hashtable;
 
 /**
  * Factory class for MysqlDataSource objects

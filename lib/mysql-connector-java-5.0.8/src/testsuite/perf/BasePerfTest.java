@@ -27,7 +27,6 @@ package testsuite.perf;
 import testsuite.BaseTestCase;
 
 import java.text.NumberFormat;
-
 import java.util.ArrayList;
 import java.util.List;
 

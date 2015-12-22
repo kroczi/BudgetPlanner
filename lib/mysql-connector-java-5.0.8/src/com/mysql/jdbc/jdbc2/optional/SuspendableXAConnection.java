@@ -1,16 +1,15 @@
 package com.mysql.jdbc.jdbc2.optional;
 
 
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
+import com.mysql.jdbc.Connection;
 
 import javax.sql.XAConnection;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
-
-import com.mysql.jdbc.Connection;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SuspendableXAConnection extends MysqlPooledConnection implements
 XAConnection, XAResource {

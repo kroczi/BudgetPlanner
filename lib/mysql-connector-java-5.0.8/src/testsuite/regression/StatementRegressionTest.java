@@ -24,41 +24,19 @@
  */
 package testsuite.regression;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.CharArrayReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.io.StringReader;
-import java.io.Writer;
+import com.mysql.jdbc.SQLError;
+import com.mysql.jdbc.ServerPreparedStatement;
+import com.mysql.jdbc.exceptions.MySQLTimeoutException;
+import testsuite.BaseTestCase;
+
+import java.io.*;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.sql.BatchUpdateException;
-import java.sql.Blob;
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.DataTruncation;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.SQLWarning;
-import java.sql.Statement;
-import java.sql.Timestamp;
-import java.sql.Types;
+import java.sql.*;
 import java.util.Calendar;
 import java.util.Locale;
 import java.util.Properties;
 import java.util.TimeZone;
-
-import testsuite.BaseTestCase;
-
-import com.mysql.jdbc.SQLError;
-import com.mysql.jdbc.ServerPreparedStatement;
-import com.mysql.jdbc.exceptions.MySQLTimeoutException;
 
 /**
  * Regression tests for the Statement class

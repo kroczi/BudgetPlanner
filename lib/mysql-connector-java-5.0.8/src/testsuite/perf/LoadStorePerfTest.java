@@ -24,12 +24,11 @@
  */
 package testsuite.perf;
 
+import testsuite.BaseTestCase;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
 import java.text.NumberFormat;
-
-import testsuite.BaseTestCase;
 
 /**
  * Simple performance testing unit test.

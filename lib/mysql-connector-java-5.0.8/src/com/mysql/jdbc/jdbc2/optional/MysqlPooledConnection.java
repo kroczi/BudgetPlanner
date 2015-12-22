@@ -24,17 +24,15 @@
  */
 package com.mysql.jdbc.jdbc2.optional;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-
-import java.util.Enumeration;
-import java.util.Hashtable;
+import com.mysql.jdbc.SQLError;
 
 import javax.sql.ConnectionEvent;
 import javax.sql.ConnectionEventListener;
 import javax.sql.PooledConnection;
-
-import com.mysql.jdbc.SQLError;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
 /**
  * This class is used to wrap and return a physical connection within a logical

@@ -27,21 +27,11 @@ package com.mysql.jdbc;
 import com.mysql.jdbc.exceptions.MySQLTimeoutException;
 import com.mysql.jdbc.profiler.ProfileEventSink;
 import com.mysql.jdbc.profiler.ProfilerEvent;
-import com.mysql.jdbc.util.LRUCache;
 
-import java.sql.DataTruncation;
 import java.sql.SQLException;
 import java.sql.SQLWarning;
 import java.sql.Types;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
-import java.util.TimerTask;
+import java.util.*;
 
 /**
  * A Statement object is used for executing a static SQL statement and obtaining

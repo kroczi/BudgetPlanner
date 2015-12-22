@@ -24,11 +24,11 @@
  */
 package testsuite.simple;
 
+import testsuite.BaseTestCase;
+
 import java.sql.Connection;
 import java.util.Properties;
 import java.util.TimeZone;
-
-import testsuite.BaseTestCase;
 
 /**
  * Tests escape processing

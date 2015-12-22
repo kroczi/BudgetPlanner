@@ -25,7 +25,6 @@
 package testsuite.simple;
 
 import com.mysql.jdbc.NotUpdatable;
-
 import testsuite.BaseTestCase;
 
 import java.sql.DatabaseMetaData;

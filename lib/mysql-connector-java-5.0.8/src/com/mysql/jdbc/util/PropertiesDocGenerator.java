@@ -24,9 +24,9 @@
  */
 package com.mysql.jdbc.util;
 
-import java.sql.SQLException;
-
 import com.mysql.jdbc.ConnectionProperties;
+
+import java.sql.SQLException;
 
 /**
  * Creates docbook table of connection properties from ConnectionProperties

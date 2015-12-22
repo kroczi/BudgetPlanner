@@ -24,10 +24,10 @@
  */
 package testsuite.regression;
 
+import testsuite.BaseTestCase;
+
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-
-import testsuite.BaseTestCase;
 
 /**
  * Tests various number-handling issues that have arrisen in the JDBC driver at

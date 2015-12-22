@@ -24,11 +24,11 @@
  */
 package com.mysql.jdbc.log;
 
+import com.mysql.jdbc.SQLError;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.SQLException;
-
-import com.mysql.jdbc.SQLError;
 
 /**
  * Creates instances of loggers for the driver to use.

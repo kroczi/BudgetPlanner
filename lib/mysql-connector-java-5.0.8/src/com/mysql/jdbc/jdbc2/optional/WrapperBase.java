@@ -24,9 +24,9 @@
  */
 package com.mysql.jdbc.jdbc2.optional;
 
-import java.sql.SQLException;
-
 import com.mysql.jdbc.SQLError;
+
+import java.sql.SQLException;
 
 /**
  * Base class for all wrapped instances created by LogicalHandle

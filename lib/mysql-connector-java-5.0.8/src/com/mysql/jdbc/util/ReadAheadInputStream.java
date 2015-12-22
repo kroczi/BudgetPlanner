@@ -24,10 +24,10 @@
 
 package com.mysql.jdbc.util;
 
+import com.mysql.jdbc.log.Log;
+
 import java.io.IOException;
 import java.io.InputStream;
-
-import com.mysql.jdbc.log.Log;
 
 /**
  * A non-blocking buffered input stream. Reads more if it can, won't block to

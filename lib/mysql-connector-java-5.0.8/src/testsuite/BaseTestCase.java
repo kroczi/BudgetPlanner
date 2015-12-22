@@ -24,28 +24,13 @@
  */
 package testsuite;
 
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.sql.Blob;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Properties;
-
 import com.mysql.jdbc.NonRegisteringDriver;
 import com.mysql.jdbc.StringUtils;
-
 import junit.framework.TestCase;
+
+import java.io.*;
+import java.sql.*;
+import java.util.*;
 
 /**
  * Base class for all test cases. Creates connections, statements, etc. and

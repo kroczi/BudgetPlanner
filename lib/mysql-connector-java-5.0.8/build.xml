@@ -1041,7 +1041,7 @@
 	       coverage data -->
 
 	<target name="test-coverage-compliance-multijvm" depends="instrument">
-		<for list="1,2,3,4,5,6,7,8" param="jvm.number"  xmlns:ac="antlib:net.sf.antcontrib">
+		<for list="1,2,3,4,5,6,7,8" param="jvm.number">
 			<sequential>
 				<if>
 					<isset property="com.mysql.jdbc.testsuite.jvm.@{jvm.number}"/>

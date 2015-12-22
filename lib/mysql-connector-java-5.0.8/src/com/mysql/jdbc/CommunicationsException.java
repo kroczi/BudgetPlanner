@@ -25,7 +25,6 @@
 package com.mysql.jdbc;
 
 import java.net.BindException;
-
 import java.sql.SQLException;
 
 /**

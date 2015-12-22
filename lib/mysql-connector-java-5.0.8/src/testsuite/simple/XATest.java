@@ -23,6 +23,14 @@
 
 package testsuite.simple;
 
+import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
+import com.mysql.jdbc.jdbc2.optional.MysqlXid;
+import testsuite.BaseTestCase;
+
+import javax.sql.XAConnection;
+import javax.transaction.xa.XAException;
+import javax.transaction.xa.XAResource;
+import javax.transaction.xa.Xid;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -30,16 +38,6 @@ import java.rmi.server.UID;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Savepoint;
-
-import javax.sql.XAConnection;
-import javax.transaction.xa.XAException;
-import javax.transaction.xa.XAResource;
-import javax.transaction.xa.Xid;
-
-import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
-import com.mysql.jdbc.jdbc2.optional.MysqlXid;
-
-import testsuite.BaseTestCase;
 
 /**
  * Unit tests for our XA implementation.

@@ -24,33 +24,17 @@
  */
 package testsuite.simple;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.CharArrayReader;
-import java.io.InputStream;
-import java.io.Reader;
-import java.io.StringReader;
-import java.math.BigDecimal;
-import java.rmi.server.UID;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.sql.Types;
-import java.text.SimpleDateFormat;
-import java.util.Locale;
-import java.util.Properties;
-
-import testsuite.BaseTestCase;
-
 import com.mysql.jdbc.NotImplemented;
 import com.mysql.jdbc.SQLError;
 import com.mysql.jdbc.StringUtils;
+import testsuite.BaseTestCase;
+
+import java.io.*;
+import java.math.BigDecimal;
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+import java.util.Properties;
 
 /**
  * DOCUMENT ME!

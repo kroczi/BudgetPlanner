@@ -24,10 +24,10 @@
  */
 package com.mysql.jdbc;
 
-import java.sql.SQLException;
-
 import com.mysql.jdbc.profiler.ProfileEventSink;
 import com.mysql.jdbc.profiler.ProfilerEvent;
+
+import java.sql.SQLException;
 
 /**
  * Allows streaming of MySQL data.

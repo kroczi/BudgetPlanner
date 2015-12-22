@@ -25,7 +25,6 @@
 package testsuite.simple;
 
 import com.mysql.jdbc.MiniAdmin;
-
 import testsuite.BaseTestCase;
 
 /**

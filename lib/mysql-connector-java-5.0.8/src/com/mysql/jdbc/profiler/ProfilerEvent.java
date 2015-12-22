@@ -23,9 +23,9 @@
 
 package com.mysql.jdbc.profiler;
 
-import java.util.Date;
-
 import com.mysql.jdbc.Util;
+
+import java.util.Date;
 
 /**
  * @author mmatthew

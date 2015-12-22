@@ -25,7 +25,6 @@
 package testsuite.simple;
 
 import com.mysql.jdbc.util.ServerController;
-
 import testsuite.BaseTestCase;
 
 /**

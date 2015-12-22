@@ -22,22 +22,17 @@
  */
 package com.mysql.jdbc.jdbc2.optional;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.mysql.jdbc.log.Log;
 
 import javax.sql.XAConnection;
 import javax.transaction.xa.XAException;
 import javax.transaction.xa.XAResource;
 import javax.transaction.xa.Xid;
-
-import com.mysql.jdbc.log.Log;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.*;
 
 /*
  * XA BEGIN <xid> [JOIN | RESUME] XA START TRANSACTION <xid> [JOIN | RESUME] XA
@@ -218,7 +213,7 @@ public class MysqlXAConnection extends MysqlPooledConnection implements
 	
 	protected static Xid[] recover(Connection c, int flag) throws XAException {
 		/*
-		    The XA RECOVER statement returns information for those XA transactions on the MySQL server that are in the PREPARED state. (See Section 13.4.7.2, “XA Transaction States”.) The output includes a row for each such XA transaction on the server, regardless of which client started it.
+		    The XA RECOVER statement returns information for those XA transactions on the MySQL server that are in the PREPARED state. (See Section 13.4.7.2, ï¿½XA Transaction Statesï¿½.) The output includes a row for each such XA transaction on the server, regardless of which client started it.
 
 			XA RECOVER output rows look like this (for an example xid value consisting of the parts 'abc', 'def', and 7):
 

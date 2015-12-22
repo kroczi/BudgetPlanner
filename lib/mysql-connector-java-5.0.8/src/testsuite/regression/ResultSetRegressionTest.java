@@ -24,39 +24,19 @@
  */
 package testsuite.regression;
 
-import java.io.Reader;
-import java.lang.reflect.Array;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.sql.CallableStatement;
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Timestamp;
-import java.sql.Types;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Locale;
-import java.util.Properties;
-import java.util.TimeZone;
-
-import testsuite.BaseTestCase;
-
 import com.mysql.jdbc.Messages;
 import com.mysql.jdbc.MysqlDataTruncation;
 import com.mysql.jdbc.NotUpdatable;
 import com.mysql.jdbc.SQLError;
-import com.mysql.jdbc.StringUtils;
 import com.mysql.jdbc.log.StandardLogger;
+import testsuite.BaseTestCase;
+
+import java.io.Reader;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.math.BigDecimal;
+import java.sql.*;
+import java.util.*;
 
 /**
  * Regression test cases for the ResultSet class.
@@ -4415,7 +4395,7 @@ public class ResultSetRegressionTest extends BaseTestCase {
 			this.stmt
 					.executeUpdate("insert into testBug30664_1 values (1),(2),(3)");
 			this.stmt
-					.executeUpdate("insert into testBug30664_2 values (1,'¢‚¤'),(2,'‚¢‚¤'),(3,' ‚¢¤')");
+					.executeUpdate("insert into testBug30664_2 values (1,'ï¿½ï¿½ï¿½'),(2,'ï¿½ï¿½ï¿½ï¿½'),(3,' ï¿½ï¿½ï¿½')");
 			this.rs = this.stmt
 					.executeQuery("select testBug30664_1.id, (select testBug30664_2.binaryvalue from testBug30664_2 where testBug30664_2.id=testBug30664_1.id) as value from testBug30664_1");
 			ResultSetMetaData tblMD = this.rs.getMetaData();

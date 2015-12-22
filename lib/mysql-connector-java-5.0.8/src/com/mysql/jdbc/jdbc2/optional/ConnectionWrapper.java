@@ -24,13 +24,13 @@
  */
 package com.mysql.jdbc.jdbc2.optional;
 
+import com.mysql.jdbc.MysqlErrorNumbers;
+import com.mysql.jdbc.SQLError;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Savepoint;
 import java.sql.Statement;
-
-import com.mysql.jdbc.MysqlErrorNumbers;
-import com.mysql.jdbc.SQLError;
 
 /**
  * This class serves as a wrapper for the org.gjt.mm.mysql.jdbc2.Connection

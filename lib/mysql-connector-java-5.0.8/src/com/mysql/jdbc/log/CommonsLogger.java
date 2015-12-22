@@ -23,9 +23,6 @@
 
 package com.mysql.jdbc.log;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 public class CommonsLogger implements com.mysql.jdbc.log.Log {
 	private Log logger;
 	

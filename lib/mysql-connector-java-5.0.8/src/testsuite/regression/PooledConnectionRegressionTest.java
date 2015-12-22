@@ -24,24 +24,22 @@
  */
 package testsuite.regression;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import com.mysql.jdbc.PacketTooBigException;
+import com.mysql.jdbc.jdbc2.optional.ConnectionWrapper;
+import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import testsuite.BaseTestCase;
 
 import javax.sql.ConnectionEvent;
 import javax.sql.ConnectionEventListener;
 import javax.sql.ConnectionPoolDataSource;
 import javax.sql.PooledConnection;
-
-import junit.framework.Test;
-import junit.framework.TestSuite;
-import testsuite.BaseTestCase;
-
-import com.mysql.jdbc.PacketTooBigException;
-import com.mysql.jdbc.jdbc2.optional.ConnectionWrapper;
-import com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 /**
  * Tests a PooledConnection implementation provided by a JDBC driver. Test case

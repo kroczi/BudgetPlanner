@@ -32,15 +32,7 @@ package com.mysql.jdbc;
 import java.sql.SQLException;
 import java.sql.Time;
 import java.sql.Timestamp;
-
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.GregorianCalendar;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.TimeZone;
+import java.util.*;
 
 class EscapeProcessor {
 	private static Map JDBC_CONVERT_TO_MYSQL_TYPE_MAP;

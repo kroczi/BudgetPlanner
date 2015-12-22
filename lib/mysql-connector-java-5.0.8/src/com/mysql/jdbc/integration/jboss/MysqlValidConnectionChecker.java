@@ -22,15 +22,14 @@
 
 package com.mysql.jdbc.integration.jboss;
 
+import com.mysql.jdbc.SQLError;
+import org.jboss.resource.adapter.jdbc.ValidConnectionChecker;
+
 import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import org.jboss.resource.adapter.jdbc.ValidConnectionChecker;
-
-import com.mysql.jdbc.SQLError;
 
 /**
  * A more efficient connection checker for JBoss.
